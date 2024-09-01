@@ -131,7 +131,7 @@ const Hero = () => {
         className="relative z-10 flex items-center justify-center h-full w-screen flex-col"
         style={{ pointerEvents: "none" }} // Prevents the text from interfering with particle interaction
       >
-        <h1 className="text-8xl text-white font-bold font-Epilogue">Hey! I'm Caleb,</h1>
+        <h1 className="text-8xl text-white font-bold font-Epilogue">  Hey! I&#39;m Caleb,</h1>
         <div className="flex row text-2xl text-gray-200 font-bold font-Epilogue mt-3">
             <span className="mr-3 text-5xl text-gray-300 font-bold font-Epilogue">a</span> <Typewriter/>
         </div>
