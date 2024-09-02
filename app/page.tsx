@@ -9,8 +9,6 @@ export default function Home() {
       <div className="h-screen">
         <Hero />
       </div>
-      <div className="h-screen border"></div>
-      <div className="h-screen border"></div>
       <Projects />
     </main>
   );
