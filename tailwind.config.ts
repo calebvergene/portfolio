@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        bg: 'rgb(20, 20, 23)',
+        bg2: 'rgb(25, 25, 28)',
+        lighttext: 'rgb(117,120,123)'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
