@@ -121,7 +121,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide font-Epilogue", className)}>
+    <h4 className={cn("text-zinc-100 font-bold text-lg tracking-wide", className)}>
       {children}
     </h4>
   );

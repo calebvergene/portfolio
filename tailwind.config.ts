@@ -11,8 +11,10 @@ const config: Config = {
     extend: {
       colors: {
         bg: 'rgb(20, 20, 23)',
-        bg2: 'rgb(25, 25, 28)',
-        lighttext: 'rgb(117,120,123)'
+        bg2: 'rgb(26, 26, 29)',
+        bg3: 'rgb(34, 34, 38)',
+        lighttext: 'rgb(117,120,123)',
+        lighttext2: 'rgb(137,140,143)'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

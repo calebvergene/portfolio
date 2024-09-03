@@ -1,6 +1,8 @@
 import Projects from "./components/projects";
 import Toolbar from "./components/toolbar";
 import Hero from "./components/hero";
+import Timeline from "./components/timeline";
+
 
 export default function Home() {
   return (
@@ -9,6 +11,7 @@ export default function Home() {
       <div className="h-screen">
         <Hero />
       </div>
+      <Timeline/>
       <Projects />
     </main>
   );
