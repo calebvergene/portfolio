@@ -157,7 +157,7 @@ const Hero = () => {
                     ease: [0.19, 1, 0.22, 1], // Same fast start, slow end for each button
                     delay: index * 0.2, // Stagger effect based on index
                     opacity: {
-                      delay: index * 0.2 + 0.45, // Delay opacity to appear in the last 25% of the animation
+                      delay: index * 0.2 + 0.25, // Delay opacity to appear in the last 25% of the animation
                       duration: 0.15,
                     },
                   }}

@@ -169,7 +169,7 @@ const Timeline: React.FC = () => {
             subtitle="Management Information Student Society"
             loc="Irvine, CA"
             description="Presenting technical workshops to over 400 students at nation-wide collegiate hackathons."
-            icon='/MascotSquareBG.png'
+            icon='/MAISS.png'
           />
         </div>
       </div>
