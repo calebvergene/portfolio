@@ -4,17 +4,18 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import React from 'react';
 
-// Custom Timeline Element Component
 const CustomTimelineElement: React.FC<{
   date: string;
   title: string;
   subtitle: string;
-  loc?: string; // Making 'loc' optional as it was missing in one of the examples.
-  description: string | string[]; // Allowing description to be a single string or an array of strings
-}> = ({ date, title, subtitle, loc, description }) => {
+  loc?: string; 
+  description: string | string[];
+  icon: string;
+}> = ({ date, title, subtitle, loc, description, icon }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.15,
+    rootMargin: '-50px 0px', 
   });
 
   const containerVariants = {
@@ -28,7 +29,7 @@ const CustomTimelineElement: React.FC<{
   };
 
   const contentVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 0 },
     visible: { opacity: 1, y: 0 },
   };
 
@@ -63,32 +64,19 @@ const CustomTimelineElement: React.FC<{
         animate={inView ? "visible" : "hidden"}
         variants={iconVariants}
         transition={{ duration: 0.6, ease: 'backInOut' }}
-        className="w-12 h-12 bg-bg2 text-white rounded-full flex items-center justify-center shadow-lg mr-6"
+        className="w-12 h-12 mt-5 bg-bg2 text-white rounded-full flex items-center justify-center shadow-lg mr-6"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
-          />
-        </svg>
+        <img src={icon} className="object-cover h-fit rounded-xl " />
+        
       </motion.div>
 
-      {/* Content */}
       {/* Content */}
 <motion.div
   initial="hidden"
   animate={inView ? "visible" : "hidden"}
   variants={contentVariants}
-  transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut', type: 'spring' }}
-  className="bg-bg2 text-white/90 p-8 rounded-lg shadow-2xl max-w-3xl"
+  transition={{ duration: 0.9, delay: 0.2, ease: 'easeOut', type: 'spring' }}
+  className="bg-bg2 text-white/90 p-8 rounded-lg shadow-2xl max-w-3xl hover:-1 duration-700"
 >
   <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-2">
     <div className="order-2 md:order-1">
@@ -132,14 +120,14 @@ const Timeline: React.FC = () => {
     <div className="border-t border-white/10 pt-12 w-9/12 mb-20">
       <div className="flex flex-col  mt-4">
         <div className="flex items-center mb-6">
-          <div className="rounded-lg p-1.5 bg-emerald-600 shadow-lg ml-8 mb-3">
+          <div className="rounded-lg p-4 bg-bg2 shadow-lg ml-8 mb-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-16 h-16 text-white"
+              className="w-10 h-10 text-white/90"
             >
               <path
                 strokeLinecap="round"
@@ -160,8 +148,9 @@ const Timeline: React.FC = () => {
             subtitle="ErgoEye"
             loc="Irvine, CA"
             description={[
-              "Developed ErgoEye's core computer vision system using OpenCV, MediaPipe, and YOLOv5 for human joint tracking, enhancing workplace safety and reducing injury liability.",
+              "Developing ErgoEye's core computer vision system using OpenCV, MediaPipe, and YOLOv5 for human joint tracking, enhancing workplace safety and reducing injury liability.",
             ]}
+            icon='/ErgoEye.png'
             
           />
           <CustomTimelineElement
@@ -172,6 +161,7 @@ const Timeline: React.FC = () => {
             description={[
               "Integrated third-party APIs for real-time flight and hotel booking with MongoDB and a Django backend, using React and Next.js to create a user-friendly system for over 400 clients",
             ]}
+            icon='/Authorized.png'
           />
           <CustomTimelineElement
             date="Nov 2023 - Present"
@@ -179,6 +169,7 @@ const Timeline: React.FC = () => {
             subtitle="Management Information Student Society"
             loc="Irvine, CA"
             description="Presenting technical workshops to over 400 students at nation-wide collegiate hackathons."
+            icon='/MascotSquareBG.png'
           />
         </div>
       </div>

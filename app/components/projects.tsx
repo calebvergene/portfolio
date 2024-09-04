@@ -24,7 +24,7 @@ export const lst = [
   {
     title: "Moodvie",
     description: "Get suggested a movie based on your mood.",
-    link: "moodvieapi.vercel.app",
+    link: "https://moodvieapi.vercel.app",
     github: "https://github.com/calebvergene/moodvie",
     image: "/Moodvie.png"
 },
@@ -41,23 +41,39 @@ export const lst = [
 
 const Projects = () => {
   return (
-    <div className="border-t border-bg2 pt-12">
-      <div className="flex items-center mb-6">
-          <div className="rounded-lg p-1.5 bg-emerald-600 shadow-lg ml-8 mb-3">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-16 text-white/90">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+    <div className="border-t border-bg2 pt-12 max-w-7xl w-full">
+      <div className="max-w-7xl mx-auto px-8 flex items-center mb-6">
+        <div className="rounded-lg p-4 bg-bg2 shadow-lg ml-0 mb-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-10 text-white/90"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+            />
           </svg>
         </div>
-        <div>
-          <h2 className="font-Epilogue ml-4 text-7xl mt-3 font-semibold">Projects</h2>
-          <h2 className="font-Epilogue ml-4 mt-1 text-xl text-lighttext">Some of my work as a full stack developer</h2>
+        <div className="ml-4">
+          <h2 className="font-Epilogue text-7xl mt-3 font-semibold text-white/90">
+            Projects
+          </h2>
+          <h2 className="font-Epilogue mt-1 text-xl text-lighttext">
+            Some of my work as a full stack developer
+          </h2>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-8">
-          <HoverEffect items={lst} />
+      <div className="max-w-6xl mx-auto px-8">
+        <HoverEffect items={lst} />
       </div>
     </div>
   );
 };
+
 
 export default Projects;
