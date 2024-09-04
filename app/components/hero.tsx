@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { Container, ISourceOptions } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
+import { motion } from "framer-motion"; // Import motion for animation
 import Typewriter from "./typewriter";
 
 const Hero = () => {
@@ -93,7 +94,7 @@ const Hero = () => {
           type: "circle",
         },
         size: {
-          value: { min: 0.5, max: 1 }, // Smaller dots
+          value: { min: 0.5, max: 1.2 }, // Smaller dots
         },
       },
       pauseOnBlur: true,
@@ -134,58 +135,83 @@ const Hero = () => {
         className="relative z-10 flex items-center justify-center h-full w-screen flex-col"
         style={{ pointerEvents: "none" }} // Prevents the text from interfering with particle interaction
       >
-        <div
-        className={'top-0 fixed mt-3 py-2 duration-300 px-2 z-30 border rounded-2xl mr-4 border-gray-300/35 bg-gray-700/15 backdrop-blur-md'}
-    >
-        <div className='flex row justify-center space-x-3 font-Epilogue text-sm'>
-            <button className="bg-transparent p-2 py-2 px-4 text-md flex items-center justify-center rounded-lg hover:py-1 hover:pt-1.5 hover:mt-0.5 hover:bg-gray-500/55 hover:mb-1 duration-500">
-                    About
-            </button>
-            <button className="bg-transparent p-2 py-2 px-4 text-md flex items-center justify-center rounded-lg hover:py-1 hover:pt-1.5 hover:mt-0.5 hover:bg-gray-500/55 hover:mb-1 duration-500">
-                    Experience
-            </button>
-            <button className="bg-transparent p-2 py-2 px-4 text-md flex items-center justify-center rounded-lg hover:py-1 hover:pt-1.5 hover:mt-0.5 hover:bg-gray-500/55 hover:mb-1 duration-500">
-                    Projects
-            </button>
-            <button className="bg-transparent p-2 py-2 px-4 text-md flex items-center justify-center rounded-lg hover:py-1 hover:pt-1.5 hover:mt-0.5 hover:bg-gray-500/55 hover:mb-1 duration-500">
-                    Skills
-            </button>
-            <button className="bg-transparent p-2 py-2 px-4 text-md flex items-center justify-center rounded-lg hover:py-1 hover:pt-1.5 hover:mt-0.5 hover:bg-gray-500/55 hover:mb-1 duration-500">
-                    Contact
-            </button>
-        </div>
-    </div>
-        <h1 className="text-8xl text-white font-bold font-Epilogue mt-16">
+        <motion.div
+          initial={{ y: -100, opacity: 0 }} // Toolbar starts above and hidden
+          animate={{ y: 0, opacity: 1 }} // Animates to visible
+          transition={{
+            duration: 0.6,
+            ease: [0.19, 1, 0.22, 1], // Ease-out for fast start, slow end
+          }}
+          className="top-0 fixed mt-3 py-2 duration-300 px-2 z-30 border rounded-2xl mr-4 border-gray-300/35 bg-gray-700/15 backdrop-blur-md"
+        >
+          <div className="flex row justify-center space-x-3 font-Epilogue text-sm">
+            {["About", "Experience", "Projects", "Skills", "Contact"].map(
+              (item, index) => (
+                <motion.button
+                  key={item}
+                  className="bg-transparent p-2 py-2 px-4 text-md flex items-center justify-center rounded-lg hover:py-1 hover:pt-1.5 hover:mt-0.5 hover:bg-gray-500/55 hover:mb-1 duration-500"
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: [0, 0, 1] }} // Remain 0 opacity for the first part
+                  transition={{
+                    duration: 0.6,
+                    ease: [0.19, 1, 0.22, 1], // Same fast start, slow end for each button
+                    delay: index * 0.2, // Stagger effect based on index
+                    opacity: {
+                      delay: index * 0.2 + 0.45, // Delay opacity to appear in the last 25% of the animation
+                      duration: 0.15,
+                    },
+                  }}
+                >
+                  {item}
+                </motion.button>
+              )
+            )}
+          </div>
+        </motion.div>
+
+        {/* Animate the heading text */}
+        <motion.h1
+          className="text-8xl text-white font-bold font-Epilogue mt-16"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+          }}
+        >
           Hey! I&#39;m Caleb,
-        </h1>
-        <div className="flex row text-2xl text-gray-200 font-bold font-Epilogue mt-3">
+        </motion.h1>
+
+        {/* Animate the subtext and typewriter */}
+        <motion.div
+          className="flex row text-2xl text-gray-200 font-bold font-Epilogue mt-3"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+            delay: 0.5, // Delayed slightly after the heading
+          }}
+        >
           <span className="mr-3 text-5xl text-gray-300 font-bold font-Epilogue">
             a
           </span>
           <Typewriter />
-        </div>
-        <div className="flex row mt-7 border-t pt-5 mb-24">
-          <button className="bg-gray-50 p-2 rounded-md mx-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-            </svg>
-          </button>
-          <button className="bg-gray-50 p-2 rounded-md mx-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-          </button>
-        </div>
+        </motion.div>
+
+        {/* Animate the social buttons */}
+        <motion.div
+          className="flex row mt-7 border-t pt-5 mb-24"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+            delay: 0.8, // Delayed after text
+          }}
+        >
+          <div></div>
+        </motion.div>
       </div>
     </div>
   );
