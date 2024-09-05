@@ -8,7 +8,7 @@ const Toolbar = () => {
   return (
     <motion.div
       className="px-2 top-0 fixed py-2 duration-300 z-30 border rounded-2xl mr-4 border-gray-300/35 bg-gray-700/15 backdrop-blur-md mt-3"
-      initial={{ y: -78, opacity: 0 }}
+      initial={{ y: -74, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{
         duration: 0.2,

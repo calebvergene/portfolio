@@ -175,8 +175,9 @@ const Hero = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            duration: 0.4,
+            duration: 0.8,
             ease: [0.34, 1.56, 0.64, 1],
+            delay: 0.15
           }}
         >
           Hey! I&#39;m Caleb,
@@ -188,9 +189,9 @@ const Hero = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            duration: 0.5,
+            duration: 1,
             ease: [0.34, 1.56, 0.64, 1],
-            delay: 0.1, // Delayed slightly after the heading
+            delay: 0.25, // Delayed slightly after the heading
           }}
         >
           <span className="mr-3 text-5xl text-gray-300 font-bold font-Epilogue">

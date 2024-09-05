@@ -97,7 +97,7 @@ export const Card = ({
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{
             duration: 0.6,
-            ease: "easeOut",
+            ease: [0.34, 1.56, 0.64, 1],
             delay: inView ? 0.1 : 0 // This adds a delay of 0.5s when the component comes into view
           }}
           className="flex justify-center items-end p-3"
