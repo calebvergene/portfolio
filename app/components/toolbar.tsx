@@ -8,11 +8,11 @@ const Toolbar = () => {
   return (
     <motion.div
       className="px-2 top-0 fixed py-2 duration-300 z-30 border rounded-2xl mr-4 border-gray-300/35 bg-gray-700/15 backdrop-blur-md mt-3"
-      initial={{ y: -100, opacity: 0 }}
+      initial={{ y: -78, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{
-        duration: 0.6,
-        ease: [0.19, 1, 0.22, 1], // Strong fast start and slow end
+        duration: 0.2,
+        ease: [0.79, 0.5, 0.02, 1], // Strong fast start and slow end
       }}
     >
       <div className="flex row justify-center space-x-3 font-Epilogue text-sm">
@@ -23,9 +23,13 @@ const Toolbar = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
-              duration: 0.6,
-              ease: [0.19, 1, 0.22, 1], // Same fast start, slow end for each button
-              delay: index * 0.2, // Delay based on the index for staggered effect
+              duration: 0.2, // Reduced duration for a faster animation
+                    ease: [0.99, 1, 0.02, 1], // Same ease curve for fast start and slow end
+                    delay: index * 0.15, // Slightly reduced stagger delay
+                    opacity: {
+                      delay: index * 0.05 + 0.1, // Adjusted opacity delay to fit within the shorter animation
+                      duration: 0.1, // Reduced opacity duration for faster appearance
+                    },
             }}
           >
             {item}

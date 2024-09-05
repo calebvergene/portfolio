@@ -136,11 +136,11 @@ const Hero = () => {
         style={{ pointerEvents: "none" }} // Prevents the text from interfering with particle interaction
       >
         <motion.div
-          initial={{ y: -100, opacity: 0 }} // Toolbar starts above and hidden
+          initial={{ y: -70, opacity: 0 }} // Toolbar starts above and hidden
           animate={{ y: 0, opacity: 1 }} // Animates to visible
           transition={{
-            duration: 0.6,
-            ease: [0.19, 1, 0.22, 1], // Ease-out for fast start, slow end
+            duration: 0.2,
+            ease: [0.79, 0.5, 0.02, 1], // Strong fast start and slow end
           }}
           className="top-0 fixed mt-3 py-2 duration-300 px-2 z-30 border rounded-2xl mr-4 border-gray-300/35 bg-gray-700/15 backdrop-blur-md"
         >
@@ -153,12 +153,12 @@ const Hero = () => {
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: [0, 0, 1] }} // Remain 0 opacity for the first part
                   transition={{
-                    duration: 0.6,
-                    ease: [0.19, 1, 0.22, 1], // Same fast start, slow end for each button
-                    delay: index * 0.2, // Stagger effect based on index
+                    duration: 0.2, // Reduced duration for a faster animation
+                    ease: [0.99, 1, 0.02, 1], // Same ease curve for fast start and slow end
+                    delay: index * 0.15, // Slightly reduced stagger delay
                     opacity: {
-                      delay: index * 0.2 + 0.25, // Delay opacity to appear in the last 25% of the animation
-                      duration: 0.15,
+                      delay: index * 0.1 + 0.1, // Adjusted opacity delay to fit within the shorter animation
+                      duration: 0.1, // Reduced opacity duration for faster appearance
                     },
                   }}
                 >
@@ -175,8 +175,8 @@ const Hero = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            duration: 0.7,
-            ease: "easeOut",
+            duration: 0.4,
+            ease: [0.34, 1.56, 0.64, 1],
           }}
         >
           Hey! I&#39;m Caleb,
@@ -188,9 +188,9 @@ const Hero = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            duration: 0.7,
-            ease: "easeOut",
-            delay: 0.5, // Delayed slightly after the heading
+            duration: 0.5,
+            ease: [0.34, 1.56, 0.64, 1],
+            delay: 0.1, // Delayed slightly after the heading
           }}
         >
           <span className="mr-3 text-5xl text-gray-300 font-bold font-Epilogue">
