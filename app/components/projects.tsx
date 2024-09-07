@@ -41,7 +41,7 @@ export const lst = [
 
 const Projects = () => {
   return (
-    <div className="border-t border-bg2 pt-16 max-w-7xl w-full">
+    <div className=" border-bg2 pt-16 max-w-7xl w-full">
       <div className="max-w-7xl mx-auto px-8 flex items-center mb-6">
         <div className="rounded-lg p-4 bg-bg2 shadow-lg ml-0 mb-3">
           <svg

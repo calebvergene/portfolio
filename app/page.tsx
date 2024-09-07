@@ -2,6 +2,7 @@ import Projects from "./components/projects";
 import Toolbar from "./components/toolbar";
 import Hero from "./components/hero";
 import Timeline from "./components/timeline";
+import ContactForm from "./components/contact";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </div>
       <Timeline/>
       <Projects />
+      <ContactForm/>
     </main>
   );
 }
