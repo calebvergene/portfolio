@@ -137,7 +137,7 @@ const Timeline: React.FC = () => {
             </svg>
           </div>
           <div className="ml-4">
-            <h2 className="text-7xl font-bold text-white/90">Experience</h2>
+            <h2 className="text-6xl font-bold text-white/90">Experience</h2>
             <h3 className="text-xl mt-1 text-lighttext">Software engineer with over 4 years of experience.</h3>
           </div>
         </div>

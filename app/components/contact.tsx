@@ -6,6 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
 
+
 const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [stateMessage, setStateMessage] = useState<string | null>(null);
@@ -41,11 +42,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={sendEmail} className="max-w-3xl w-full mx-6 p-8 bg-bg2/0 shadow-md space-y-6 font-Epilogue mt-20 mb-10 border-zinc-800 pt-14">
-      <h2 className="text-4xl flex row font-semibold text-white mb-7"><span className='pb-2 pt-1.5 pr-1.5 pl-1 mr-2'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
-         <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-        </svg> </span>Contact Me!
-      </h2>
+    <form onSubmit={sendEmail} className="max-w-3xl w-full mx-6 p-8 bg-bg2/0 shadow-md space-y-6 font-Epilogue mb-10 border-zinc-800 pt-0">
       
       <div className="flex flex-col">
         <label htmlFor="user_name" className="text-white mb-2">Name</label>

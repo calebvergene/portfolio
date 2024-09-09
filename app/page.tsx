@@ -3,6 +3,7 @@ import Toolbar from "./components/toolbar";
 import Hero from "./components/hero";
 import Timeline from "./components/timeline";
 import ContactForm from "./components/contact";
+import Skills from "./components/skills";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       </div>
       <Timeline/>
       <Projects />
+      <Skills />
       <ContactForm/>
     </main>
   );

@@ -60,11 +60,11 @@ const Projects = () => {
           </svg>
         </div>
         <div className="ml-4">
-          <h2 className="font-Epilogue text-7xl mt-3 font-semibold text-white/90">
+          <h2 className="font-Epilogue text-6xl mt-3 font-semibold text-white/90">
             Projects
           </h2>
           <h2 className="font-Epilogue mt-1 text-xl text-lighttext">
-            Some of my work as a full stack developer
+            Turning my ideas into code.
           </h2>
         </div>
       </div>
