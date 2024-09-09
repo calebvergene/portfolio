@@ -66,23 +66,13 @@ const buttonVariant = {
 // Skills Component
 const Skills = () => {
     return (
-        <div className=" border-bg2 pt-24 max-w-7xl w-full">
+        <div className=" border-bg2 pt-24 max-w-7xl mt-6 w-full" id='skills'>
             <div className="max-w-7xl mx-auto px-8 flex items-center mb-6">
                 <div className="rounded-lg p-4 bg-bg2 shadow-lg ml-0 mb-3">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="size-10 text-white/90"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
-                        />
-                    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-10 text-white/90">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                </svg>
+
                 </div>
                 <div className="ml-4">
                     <h2 className="font-Epilogue text-6xl mt-3 font-semibold text-white/90">
@@ -98,13 +88,14 @@ const Skills = () => {
 
                 {/* Programming Languages Heading */}
                 <motion.h2
-                    className='font-Epilogue text-3xl mb-3 text-white/95 font-semibold'
-                    variants={headingVariant}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
+                  className="font-Epilogue text-3xl mb-3 text-white/95 font-semibold underline decoration-wavy decoration-emerald-500"
+                  variants={headingVariant}
+                  style={{ textUnderlineOffset: '7.8px' }}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
                 >
-                    Programming Languages
+                  Programming Languages
                 </motion.h2>
 
                 <motion.div
@@ -118,7 +109,7 @@ const Skills = () => {
                         <motion.button
                             key={language.name}
                             variants={buttonVariant}
-                            className="inline-flex bg-emerald-950/20 items-center font-Epilogue px-2 border-emerald-500/70 text-slate-300 border-2 p-1.5 rounded-lg m-1 hover:border-emerald-500 duration-500 hover:text-white hover:bg-emerald-950/80"
+                            className="inline-flex items-center font-Epilogue px-2 border-lighttext text-slate-300 border-2 p-1.5 rounded-lg m-1 hover:border-emerald-500 duration-500 hover:text-white hover:bg-emerald-950/80"
                         >
                             <span className='text-2xl'>{language.icon}</span>
                             <span className="pt-0.5 pl-1.5">{language.name}</span>
@@ -128,8 +119,9 @@ const Skills = () => {
 
                 {/* Frameworks Heading */}
                 <motion.h2
-                    className='font-Epilogue text-3xl font-semibold mb-3 text-white/95 mt-14'
+                    className='font-Epilogue text-3xl font-semibold mb-3 text-white/95 mt-14 underline decoration-wavy  decoration-emerald-500'
                     variants={headingVariant}
+                    style={{ textUnderlineOffset: '6px' }}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -148,7 +140,7 @@ const Skills = () => {
                         <motion.button
                             key={language.name}
                             variants={buttonVariant}
-                            className="inline-flex bg-emerald-950/20 items-center font-Epilogue px-2 border-emerald-500/70 text-slate-300 border-2 p-1.5 rounded-lg m-1 hover:border-emerald-500 duration-500 hover:text-white hover:bg-emerald-950/80"
+                            className="inline-flex items-center font-Epilogue px-2 border-lighttext text-slate-300 border-2 p-1.5 rounded-lg m-1 hover:border-emerald-500 duration-500 hover:text-white hover:bg-emerald-950/80"
                         >
                             <span className='text-2xl'>{language.icon}</span>
                             <span className="pt-0.5 pl-1.5">{language.name}</span>
@@ -158,8 +150,9 @@ const Skills = () => {
 
                 {/* Tools and Services Heading */}
                 <motion.h2
-                    className='font-Epilogue text-3xl font-semibold mb-3 text-white/95 mt-14'
+                    className='font-Epilogue text-3xl font-semibold mb-3 text-white/95 mt-14 underline decoration-wavy decoration-emerald-500'
                     variants={headingVariant}
+                    style={{ textUnderlineOffset: '6px' }}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -178,7 +171,7 @@ const Skills = () => {
                         <motion.button
                             key={language.name}
                             variants={buttonVariant}
-                            className="inline-flex bg-emerald-950/20 items-center font-Epilogue px-2 border-emerald-500/70 text-slate-300 border-2 p-1.5 rounded-lg m-1 hover:border-emerald-500 duration-500 hover:text-white hover:bg-emerald-950/80"
+                            className="inline-flex items-center font-Epilogue px-2 border-lighttext text-slate-300 border-2 p-1.5 rounded-lg m-1 hover:border-emerald-500 duration-500 hover:text-white hover:bg-emerald-950/80"
                         >
                             <span className='text-2xl'>{language.icon}</span>
                             <span className="pt-0.5 pl-1.5">{language.name}</span>
@@ -188,7 +181,7 @@ const Skills = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="max-w-7xl mx-auto px-8 flex items-center mb-14 mt-32">
+            <div className="max-w-7xl mx-auto px-8 flex items-center mb-14 mt-32" id='contact'>
                 <div className="rounded-lg p-4 text-4xl bg-bg2 shadow-lg ml-0 mb-3">
                     <IoMailOutline />
                 </div>
@@ -197,7 +190,7 @@ const Skills = () => {
                         Contact
                     </h2>
                     <h2 className="font-Epilogue mt-1 text-xl text-lighttext">
-                        Let&#39;s schedule a virtual coffee chat!
+                      Let&#39;s schedule a virtual coffee chat!
                     </h2>
                 </div>
             </div>

@@ -144,7 +144,7 @@ const Hero = () => {
           }}
           className="top-0 fixed mt-3 py-2 duration-300 px-2 z-30 border rounded-2xl mr-4 border-gray-300/35 bg-gray-700/15 backdrop-blur-md"
         >
-          <div className="flex row justify-center space-x-3 font-Epilogue text-sm">
+          <div className="flex row justify-center space-x-3 font-Epilogue text-sm" id="about">
             {["About", "Experience", "Projects", "Skills", "Contact"].map(
               (item, index) => (
                 <motion.button
