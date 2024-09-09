@@ -197,7 +197,7 @@ const Skills = () => {
                         Contact
                     </h2>
                     <h2 className="font-Epilogue mt-1 text-xl text-lighttext">
-                        Let's schedule a virtual coffee chat!
+                        Let&#39;s schedule a virtual coffee chat!
                     </h2>
                 </div>
             </div>
