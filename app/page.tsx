@@ -4,6 +4,7 @@ import Hero from "./components/hero";
 import Timeline from "./components/timeline";
 import ContactForm from "./components/contact";
 import Skills from "./components/skills";
+import { FaInstagram } from "react-icons/fa";
 
 
 export default function Home() {

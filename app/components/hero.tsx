@@ -149,7 +149,7 @@ const Hero = () => {
               (item, index) => (
                 <motion.button
                   key={item}
-                  className="bg-transparent p-2 py-2 px-4 text-md flex items-center justify-center rounded-lg hover:py-1 hover:pt-1.5 hover:mt-0.5 hover:bg-gray-500/55 hover:mb-1 duration-500"
+                  className="bg-transparent p-2 py-2 px-4 text-md flex items-center justify-center rounded-lg hover:py-1 hover:pt-1.5 hover:mt-0.5 hover:bg-gray-500/55 hover:mb-1 duration-500 text-white/90"
                   initial={{ y: -30, opacity: 0 }}
                   animate={{ y: 0, opacity: [0, 0, 1] }} // Remain 0 opacity for the first part
                   transition={{

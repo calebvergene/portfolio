@@ -77,10 +77,15 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="flex justify-between items-center">
-        <div className="text-3xl mt-2 flex space-x-3 ml-2">
-            <button className='text-white/70 hover:text-white/90'><FaInstagram /></button>
-            <button className='text-white/70 hover:text-white/90'><FaLinkedinIn /></button>
-        </div>
+      <div className="text-3xl mt-2 flex space-x-3 ml-2">
+        <a href="https://www.instagram.com/calebvergene/" target="_blank" rel="noopener noreferrer" className='text-white/70 hover:text-white/90'>
+          <FaInstagram />
+        </a>
+        <a href="https://www.linkedin.com/in/calebvergene/" target="_blank" rel="noopener noreferrer" className='text-white/70 hover:text-white/90'>
+          <FaLinkedinIn />
+        </a>
+      </div>
+
         
         <div className="flex justify-end">
             <input
