@@ -14,6 +14,14 @@ export const lst = [
     image: "/Internity.png"
   },
   {
+    title: "Chlorrophyl",
+    description:
+      "HackMIT 24 - Visualize solutions to urban heat islands in Google Street View using ControlNet v1.1 with Canny Edge.",
+    link: "https://ballot.hackmit.org/project/nrxbx-dybbn-omneh-ziutg",
+    github: "https://github.com/calebvergene/Chlorophyll-HackMIT",
+    image: "/logo-title.png"
+  },
+  {
     title: "JournAI",
     description:
       "Explore your campus using Google Gemini as a virtual tourguide.",
@@ -22,18 +30,18 @@ export const lst = [
     image: "/JournAI.png"
   },
   {
+    title: "Posture Detection App",
+    description:
+      "Automate the Rapid Entire Body Assessment (REBA) to rapidly evaluate the risk of musculoskeletal disorders (MSD).",
+    github: "https://github.com/calebvergene/ErgoEye",
+    image: "/PoseDetection.png"
+  },
+  {
     title: "Moodvie",
     description: "Get suggested a movie based on your mood.",
     link: "https://moodvieapi.vercel.app",
     github: "https://github.com/calebvergene/moodvie",
     image: "/Moodvie.png"
-},
-{
-  title: "Posture Detection Model",
-  description:
-    "Automate the Rapid Entire Body Assessment (REBA) to rapidly evaluate the risk of musculoskeletal disorders (MSD).",
-  github: "https://github.com/calebvergene/ErgoEye",
-  image: "/PoseDetection.png"
 },
 ];
 
