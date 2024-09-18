@@ -14,9 +14,9 @@ export const lst = [
     image: "/Internity.png"
   },
   {
-    title: "Chlorrophyl",
+    title: "Chlorrophyl [HackMIT 24]",
     description:
-      "HackMIT 24 - Visualize solutions to urban heat islands in Google Street View using ControlNet v1.1 with Canny Edge.",
+      "Visualize solutions to urban heat islands in Google Street View using ControlNet v1.1 with Canny Edge.",
     link: "https://ballot.hackmit.org/project/nrxbx-dybbn-omneh-ziutg",
     github: "https://github.com/calebvergene/Chlorophyll-HackMIT",
     image: "/logo-title.png"
