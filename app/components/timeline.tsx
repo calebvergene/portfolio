@@ -118,6 +118,7 @@ const CustomTimelineElement: React.FC<{
 const Timeline: React.FC = () => {
   return (
     <div className=" border-white/10 pt-12 w-9/12 mb-20" id="experience">
+      
       <div className="flex flex-col  mt-4">
         <div className="flex items-center mb-6">
           <div className="rounded-lg p-4 bg-bg2 shadow-lg ml-8 mb-3">
