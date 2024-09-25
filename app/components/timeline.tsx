@@ -143,6 +143,16 @@ const Timeline: React.FC = () => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-8 mt-10 space-y-10 border-l-2 pb-4 border-white/10">
+        <CustomTimelineElement
+            date="Aug 2024 - Present"
+            title="Full-Stack Software Engineer"
+            subtitle="Loops.ai"
+            loc="Remote"
+            description={[
+              "Built the web platform of Loops, a reddit for professionals. Working with Django, Firebase, and React."]}
+            icon='/LoopsAI.png'
+            
+          />
           <CustomTimelineElement
             date="Apr 2024 - Present"
             title="Co-Founder and Head of AI/Backend"
@@ -169,7 +179,7 @@ const Timeline: React.FC = () => {
             title="Vice President of Professional Development"
             subtitle="Management Information Student Society"
             loc="Irvine, CA"
-            description="Presenting technical workshops to over 400 students at nation-wide collegiate hackathons."
+            description="Accelerating risk management procedures and developing product roadmaps for local tech startups and VCs."
             icon='/MAISS.png'
           />
         </div>
