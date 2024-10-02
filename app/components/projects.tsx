@@ -33,6 +33,7 @@ export const lst = [
     title: "Posture Detection App",
     description:
       "Automate the Rapid Entire Body Assessment (REBA) to rapidly evaluate the risk of musculoskeletal disorders (MSD).",
+    link: "https://drive.google.com/file/d/1jqB4vRLr67dKaf3-PdutNct6hhg3s3iu/view?usp=sharing",
     github: "https://github.com/calebvergene/ErgoEye",
     image: "/PoseDetection.png"
   },
